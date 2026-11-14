@@ -1,0 +1,4 @@
+[2026-11-14 12:11:35] OrderID: ORD-95130 | Customer: Theekshana Nilupul | Items: Classic Margherita (Regular),  | Total: LKR 1930.0 | Paid LKR 1930.0 via Credit/Debit Card (Ending: 8740)
+[2026-11-14 13:04:58] OrderID: ORD-98682 | Customer: rgwg | Items: Pepperoni Feast (Large),  | Total: LKR 3140.0 | Cash on Delivery / Counter Payment of LKR 3140.0 confirmed.
+[2026-11-14 13:28:42] OrderID: ORD-22232 | Customer: Theekshana | Items: Classic Margherita (Large),  | Total: LKR 1880.0 | Cash on Delivery / Counter Payment of LKR 1880.0 confirmed.
+[2026-11-14 13:38:25] OrderID: ORD-5584 | Customer: Theekshana | Items: Pepperoni Feast (Large),  | Total: LKR 2460.0 | Cash on Delivery / Counter Payment of LKR 2460.0 confirmed.
