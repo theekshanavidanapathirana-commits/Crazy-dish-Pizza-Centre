@@ -43,7 +43,7 @@ public class PizzaWebAppSimulator extends JFrame {
         inventoryDB = DatabaseManager.loadInventory();
         shoppingCart = new ArrayList<>();
 
-        setTitle("Crazy Dish - Gourmet Custom Pizza Experience");
+        setTitle("Crazy Dish - WOOD-FIRED PIZZA");
         setSize(1020, 720);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -137,7 +137,7 @@ public class PizzaWebAppSimulator extends JFrame {
         banner.setLayout(new BorderLayout());
         banner.setBorder(new EmptyBorder(14, 25, 14, 25));
 
-        JLabel brand = new JLabel("CRAZY DISH ARTISAN PIZZAS   |   " + titleText);
+        JLabel brand = new JLabel("CRAZY DISH WOOD-FIRED PIZZAS   |   " + titleText);
         brand.setForeground(Color.WHITE);
         brand.setFont(new Font("SansSerif", Font.BOLD, 18));
         banner.add(brand, BorderLayout.WEST);
@@ -165,7 +165,7 @@ public class PizzaWebAppSimulator extends JFrame {
         top.setLayout(new GridLayout(2, 1));
         top.setBorder(new EmptyBorder(25, 20, 25, 20));
 
-        JLabel title = new JLabel("CRAZY DISH - WOOD-FIRED PIZZA STUDIO", SwingConstants.CENTER);
+        JLabel title = new JLabel("CRAZY DISH - WOOD-FIRED PIZZA", SwingConstants.CENTER);
         title.setForeground(GOLD_ACCENT);
         title.setFont(new Font("SansSerif", Font.BOLD, 28));
 
@@ -185,18 +185,18 @@ public class PizzaWebAppSimulator extends JFrame {
         loginBox.setLayout(new GridLayout(6, 1, 10, 10));
         loginBox.setBorder(new EmptyBorder(25, 30, 25, 30));
 
-        JLabel lblL = new JLabel("Member & Manager Sign In");
-        lblL.setFont(new Font("SansSerif", Font.BOLD, 20));
+        JLabel lblL = new JLabel("Sign In");
+        lblL.setFont(new Font("SansSerif", Font.BOLD, 24));
         lblL.setForeground(CRIMSON_RED);
 
         JTextField txtLoginUser = new JTextField();
         JPasswordField txtLoginPass = new JPasswordField();
-        JButton btnLogin = createStyledButton("Sign In & Start Ordering ->", BRAND_ORANGE, CRIMSON_RED);
+        JButton btnLogin = createStyledButton("Sign In", BRAND_ORANGE, CRIMSON_RED);
 
         loginBox.add(lblL);
-        loginBox.add(new JLabel("Username (Customer: kasun  |  Admin: admin):"));
+        loginBox.add(new JLabel("Username:"));
         loginBox.add(txtLoginUser);
-        loginBox.add(new JLabel("Password (Customer: 1234   |  Admin: admin123):"));
+        loginBox.add(new JLabel("Password:"));
         loginBox.add(txtLoginPass);
         loginBox.add(btnLogin);
 
@@ -225,7 +225,7 @@ public class PizzaWebAppSimulator extends JFrame {
         signupBox.setLayout(new GridLayout(10, 1, 5, 5));
         signupBox.setBorder(new EmptyBorder(20, 30, 20, 30));
 
-        JLabel lblS = new JLabel("New Customer VIP Registration");
+        JLabel lblS = new JLabel("Registration");
         lblS.setFont(new Font("SansSerif", Font.BOLD, 20));
         lblS.setForeground(FRESH_GREEN);
 
@@ -233,16 +233,16 @@ public class PizzaWebAppSimulator extends JFrame {
         JTextField txtRegPhone = new JTextField();
         JTextField txtRegUser = new JTextField();
         JPasswordField txtRegPass = new JPasswordField();
-        JButton btnRegister = createStyledButton("Create Free Account", FRESH_GREEN, new Color(30, 110, 50));
+        JButton btnRegister = createStyledButton("Create An Account", FRESH_GREEN, new Color(30, 110, 50));
 
         signupBox.add(lblS);
         signupBox.add(new JLabel("Full Name:"));
         signupBox.add(txtRegName);
         signupBox.add(new JLabel("Phone Number:"));
         signupBox.add(txtRegPhone);
-        signupBox.add(new JLabel("Choose Username:"));
+        signupBox.add(new JLabel("Enter Username:"));
         signupBox.add(txtRegUser);
-        signupBox.add(new JLabel("Choose Password:"));
+        signupBox.add(new JLabel("Enter Password:"));
         signupBox.add(txtRegPass);
         signupBox.add(btnRegister);
 
@@ -254,6 +254,11 @@ public class PizzaWebAppSimulator extends JFrame {
 
             if (name.isEmpty() || uname.isEmpty() || pass.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "All fields are required!");
+                return;
+            }
+             String cleanPhone = phone.replaceAll("\\s+", "");
+            if (!cleanPhone.matches("\\d{10}")) {
+                JOptionPane.showMessageDialog(this, "Invalid Phone Number! Please enter exactly 10 digits.", "Registration Error", JOptionPane.ERROR_MESSAGE);
                 return;
             }
             if (userDB.containsKey(uname)) {
@@ -276,7 +281,7 @@ public class PizzaWebAppSimulator extends JFrame {
     private JPanel createPhase1GalleryPanel() {
         JPanel panel = new JPanel(new BorderLayout(15, 15));
         panel.setBackground(CREAM_BG);
-        panel.add(createTopBanner("PHASE 1: Signature Pizza Showcase"), BorderLayout.NORTH);
+        panel.add(createTopBanner("Signature Pizza Showcase"), BorderLayout.NORTH);
 
         JPanel grid = new JPanel(new GridLayout(2, 2, 25, 25));
         grid.setBackground(CREAM_BG);
@@ -315,7 +320,7 @@ public class PizzaWebAppSimulator extends JFrame {
         nav.setBackground(CREAM_BG);
         nav.setBorder(new EmptyBorder(5, 40, 15, 40));
 
-        JButton btnNext = createStyledButton("Explore Menu & Order Pizzas (Phase 2)  ->", BRAND_ORANGE, CRIMSON_RED);
+        JButton btnNext = createStyledButton("Explore Menu & Order Pizzas", BRAND_ORANGE, CRIMSON_RED);
         btnNext.setFont(new Font("SansSerif", Font.BOLD, 16));
         btnNext.addActionListener(e -> cardLayout.show(mainContainer, "PHASE2"));
 
@@ -327,7 +332,7 @@ public class PizzaWebAppSimulator extends JFrame {
     private JPanel createPhase2SelectionPanel() {
         JPanel panel = new JPanel(new BorderLayout(15, 15));
         panel.setBackground(CREAM_BG);
-        panel.add(createTopBanner("PHASE 2: Select Pizzas & Add to Cart"), BorderLayout.NORTH);
+        panel.add(createTopBanner("Select Pizzas & Add to Cart"), BorderLayout.NORTH);
 
         JPanel listPanel = new JPanel(new GridLayout(4, 1, 14, 14));
         listPanel.setBackground(CREAM_BG);
@@ -351,7 +356,6 @@ public class PizzaWebAppSimulator extends JFrame {
             btnAdd.addActionListener(e -> {
                 shoppingCart.add(new CustomPizzaItem(pizza));
                 updateCartButtonCount();
-                JOptionPane.showMessageDialog(this, pizza.getTitle() + " added to your cart!");
             });
 
             row.add(picLbl, BorderLayout.WEST);
@@ -365,8 +369,8 @@ public class PizzaWebAppSimulator extends JFrame {
         nav.setBackground(CREAM_BG);
         nav.setBorder(new EmptyBorder(5, 40, 15, 40));
 
-        JButton btnBack = createStyledButton("<- Back to Gallery", new Color(100, 100, 110), DARK_BG);
-        btnPhase2GoCart = createStyledButton("Go to Cart & Customize (0 Items)  ->", BRAND_ORANGE, CRIMSON_RED);
+        JButton btnBack = createStyledButton("Back to Gallery", new Color(100, 100, 110), DARK_BG);
+        btnPhase2GoCart = createStyledButton("Go to Cart & Customize (0 Items)", BRAND_ORANGE, CRIMSON_RED);
 
         btnBack.addActionListener(e -> cardLayout.show(mainContainer, "PHASE1"));
         btnPhase2GoCart.addActionListener(e -> {
@@ -382,13 +386,13 @@ public class PizzaWebAppSimulator extends JFrame {
 
     private void updateCartButtonCount() {
         if (btnPhase2GoCart != null) {
-            btnPhase2GoCart.setText("Go to Cart & Customize (" + shoppingCart.size() + " Items)  ->");
+            btnPhase2GoCart.setText("Go to Cart & Customize (" + shoppingCart.size() + " Items)");
         }
     }
     private JPanel createPhase3CartAndCheckoutPanel() {
         JPanel panel = new JPanel(new BorderLayout(15, 15));
         panel.setBackground(CREAM_BG);
-        panel.add(createTopBanner("PHASE 3: Shopping Cart, Customizer & Checkout"), BorderLayout.NORTH);
+        panel.add(createTopBanner("Shopping Cart, Customizer & Checkout"), BorderLayout.NORTH);
 
         JPanel centerWrap = new JPanel(new BorderLayout(20, 15));
         centerWrap.setBackground(CREAM_BG);
@@ -474,13 +478,20 @@ public class PizzaWebAppSimulator extends JFrame {
                 }
 
                 PaymentStrategy payment;
-                if (cmbPayment.getSelectedIndex() == 1) {
-                    String cardNo = JOptionPane.showInputDialog(this, "Enter 16-digit Card Number:");
-                    if (cardNo == null || cardNo.trim().isEmpty()) return;
-                    payment = new CardPayment(cardNo);
-                } else {
-                    payment = new CashPayment();
-                }
+            if (cmbPayment.getSelectedIndex() == 1) {
+               String cardNo = JOptionPane.showInputDialog(this, "Enter 16-digit Card Number:");
+                   if (cardNo == null) return;
+    
+    
+               String cleanCard = cardNo.replaceAll("\\s+", "");
+               if (!cleanCard.matches("\\d{16}")) {
+                JOptionPane.showMessageDialog(this, "Invalid Card Number! Please enter exactly 16 digits.", "Payment Error", JOptionPane.ERROR_MESSAGE);
+                  return;
+            }
+               payment = new CardPayment(cleanCard);
+            } else {
+               payment = new CashPayment();
+            }
                 String receiptMsg = payment.processPayment(grandTotal);
 
                 for (String ingName : req.keySet()) {

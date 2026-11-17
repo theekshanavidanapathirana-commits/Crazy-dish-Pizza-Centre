@@ -12,7 +12,7 @@ public class DatabaseManager {
     private static final String INVENTORY_DB = "inventory.txt";
     private static final String SALES_DB = "sales_report.txt";
 
-    // --- 1. USER DATABASE OPERATIONS ---
+    // USER DATABASE OPERATIONS
     public static HashMap<String, User> loadUsers() {
         HashMap<String, User> users = new HashMap<>();
         File file = new File(USERS_DB);
@@ -48,17 +48,17 @@ public class DatabaseManager {
         }
     }
 
-    // --- 2. INVENTORY DATABASE OPERATIONS ---
+    // INVENTORY DATABASE OPERATIONS 
     public static HashMap<String, Ingredient> loadInventory() {
         HashMap<String, Ingredient> inventory = new HashMap<>();
         File file = new File(INVENTORY_DB);
 
         if (!file.exists()) {
-            inventory.put("Extra Mozzarella", new Ingredient("Extra Mozzarella", 180.0, 15));
-            inventory.put("Roast Chicken", new Ingredient("Roast Chicken", 250.0, 4));
-            inventory.put("Button Mushrooms", new Ingredient("Button Mushrooms", 140.0, 12));
-            inventory.put("Black Olives", new Ingredient("Black Olives", 160.0, 3));
-            inventory.put("Jalapenos", new Ingredient("Jalapenos", 110.0, 20));
+            inventory.put("Extra Mozzarella", new Ingredient("Extra Mozzarella", 180.0, 100));
+            inventory.put("Roast Chicken", new Ingredient("Roast Chicken", 250.0, 100));
+            inventory.put("Button Mushrooms", new Ingredient("Button Mushrooms", 140.0, 100));
+            inventory.put("Black Olives", new Ingredient("Black Olives", 160.0, 100));
+            inventory.put("Jalapenos", new Ingredient("Jalapenos", 110.0, 100));
             saveInventory(inventory);
             return inventory;
         }
@@ -87,7 +87,7 @@ public class DatabaseManager {
         }
     }
 
-    // --- 3. SALES LOG DATABASE OPERATIONS ---
+    //SALES LOG DATABASE OPERATIONS
     public static void logSale(String orderId, String customerName, String itemsSummary, double total, String paymentInfo) {
         String time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
         try (PrintWriter pw = new PrintWriter(new FileWriter(SALES_DB, true))) {

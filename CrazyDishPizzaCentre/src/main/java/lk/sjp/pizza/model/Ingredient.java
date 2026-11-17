@@ -11,11 +11,19 @@ public class Ingredient {
         this.stockQty = stockQty;
     }
 
-    public String getName() { return name; }
-    public double getPrice() { return price; }
-    public int getStockQty() { return stockQty; }
+    public String getName() { 
+        return name; 
+    }
+    public double getPrice() {
+        return price; 
+    }
+    public int getStockQty() {
+        return stockQty;
+    }
     
     public void setStockQty(int stockQty) { 
-        if (stockQty >= 0) this.stockQty = stockQty; 
+        if (stockQty >= 0){
+            this.stockQty = stockQty;
+        } 
     }
 }

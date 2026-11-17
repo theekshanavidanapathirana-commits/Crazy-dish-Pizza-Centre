@@ -10,6 +10,10 @@ public abstract class OrderItem implements Billable {
         this.basePrice = basePrice;
     }
 
-    public String getItemName() { return itemName; }
-    public double getBasePrice() { return basePrice; }
+    public String getItemName() { 
+        return itemName; 
+    }
+    public double getBasePrice() {
+        return basePrice;
+    }
 }

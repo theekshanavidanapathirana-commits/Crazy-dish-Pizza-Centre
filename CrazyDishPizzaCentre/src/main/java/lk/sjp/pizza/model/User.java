@@ -15,9 +15,19 @@ public class User {
         this.role = role;
     }
 
-    public String getUsername() { return username; }
-    public String getPassword() { return password; }
-    public String getFullName() { return fullName; }
-    public String getPhone() { return phone; }
-    public String getRole() { return role; }
+    public String getUsername() { 
+        return username; 
+    }
+    public String getPassword() {
+        return password; 
+    }
+    public String getFullName() { 
+        return fullName; 
+    }
+    public String getPhone() { 
+        return phone;
+    }
+    public String getRole() {
+        return role; 
+    }
 }

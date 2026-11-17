@@ -18,8 +18,16 @@ public enum BasePizzaMenu {
         this.description = description;
     }
 
-    public String getTitle() { return title; }
-    public double getBasicPrice() { return basicPrice; }
-    public String getIcon() { return icon; }
-    public String getDescription() { return description; }
+    public String getTitle() {
+        return title; 
+    }
+    public double getBasicPrice() {
+        return basicPrice; 
+    }
+    public String getIcon() { 
+        return icon; 
+    }
+    public String getDescription() {
+        return description;
+    }
 }
