@@ -17,3 +17,4 @@
 [2026-11-18 08:52:06] OrderID: ORD-26667 | Customer: . | Items: Smoky BBQ Chicken (Regular), Classic Margherita (Large),  | Total: LKR 3450.0 | Paid LKR 3450.0 via Credit/Debit Card (Ending: 1111)
 [2026-11-18 08:52:43] OrderID: ORD-63642 | Customer: . | Items: Garden Veggie Supreme (Regular),  | Total: LKR 1400.0 | Cash on Delivery / Counter Payment of LKR 1400.0 confirmed.
 [2026-11-18 09:21:10] OrderID: ORD-70298 | Customer: . | Items: Smoky BBQ Chicken (Large),  | Total: LKR 2980.0 | Cash on Delivery / Counter Payment of LKR 2980.0 confirmed.
+[2026-11-18 10:07:55] OrderID: ORD-75158 | Customer: . | Items: Pepperoni Feast (Regular),  | Total: LKR 1960.0 | Cash on Delivery / Counter Payment of LKR 1960.0 confirmed.
