@@ -1,4 +1,4 @@
-package lk.sjp.pizza.model;
+package model;
 import java.util.ArrayList;
 
 public class CustomPizzaItem extends OrderItem {

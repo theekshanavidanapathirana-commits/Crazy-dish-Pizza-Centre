@@ -1,5 +1,5 @@
-package lk.sjp.pizza.model;
-import lk.sjp.pizza.service.PaymentStrategy;
+package model;
+import service.PaymentStrategy;
 
 public class CardPayment implements PaymentStrategy {
     private String cardNumber;

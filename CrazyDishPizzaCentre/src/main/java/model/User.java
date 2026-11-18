@@ -1,4 +1,4 @@
-package lk.sjp.pizza.model;
+package model;
 
 public class User {
     private String username;

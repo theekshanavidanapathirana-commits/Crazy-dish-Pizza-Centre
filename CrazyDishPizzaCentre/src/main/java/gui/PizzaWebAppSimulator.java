@@ -1,10 +1,15 @@
-package lk.sjp.pizza.gui;
+package gui;
 
-import lk.sjp.pizza.exception.AuthenticationException;
-import lk.sjp.pizza.exception.OutOfStockException;
-import lk.sjp.pizza.model.*;
-import lk.sjp.pizza.service.PaymentStrategy;
-import lk.sjp.pizza.util.DatabaseManager;
+import model.CardPayment;
+import model.Ingredient;
+import model.CashPayment;
+import model.CustomPizzaItem;
+import model.User;
+import model.BasePizzaMenu;
+import exception.AuthenticationException;
+import exception.OutOfStockException;
+import service.PaymentStrategy;
+import util.DatabaseManager;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;

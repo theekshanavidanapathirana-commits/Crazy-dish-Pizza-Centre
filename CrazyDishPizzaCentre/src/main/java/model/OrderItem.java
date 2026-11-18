@@ -1,5 +1,5 @@
-package lk.sjp.pizza.model;
-import lk.sjp.pizza.service.Billable;
+package model;
+import service.Billable;
 
 public abstract class OrderItem implements Billable {
     private String itemName;

@@ -1,4 +1,4 @@
-package lk.sjp.pizza.model;
+package model;
 
 public enum BasePizzaMenu {
     MARGHERITA("Classic Margherita", 1200.0, "🍕", "Rich tomato sauce with melted mozzarella"),

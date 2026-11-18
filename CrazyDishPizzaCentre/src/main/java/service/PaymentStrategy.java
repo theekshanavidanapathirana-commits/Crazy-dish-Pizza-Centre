@@ -1,4 +1,4 @@
-package lk.sjp.pizza.service;
+package service;
 
 public interface PaymentStrategy {
     String processPayment(double amount);

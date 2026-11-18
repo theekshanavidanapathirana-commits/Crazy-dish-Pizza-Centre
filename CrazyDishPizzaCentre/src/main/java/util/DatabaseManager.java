@@ -1,7 +1,7 @@
-package lk.sjp.pizza.util;
+package util;
 
-import lk.sjp.pizza.model.Ingredient;
-import lk.sjp.pizza.model.User;
+import model.Ingredient;
+import model.User;
 import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

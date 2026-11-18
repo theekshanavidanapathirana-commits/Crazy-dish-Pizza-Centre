@@ -1,4 +1,4 @@
-package lk.sjp.pizza.exception;
+package exception;
 
 public class AuthenticationException extends Exception {
     public AuthenticationException(String message) {
