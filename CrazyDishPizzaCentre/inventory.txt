@@ -1,6 +1,6 @@
-Extra Mozzarella,180.0,0
-Black Olives,160.0,93
-Button Mushrooms,120.0,99
-Roast Chicken,100.0,94
-Jalapenos,110.0,10
-Extra Cheese,160.0,95
+Extra Mozzarella,180.0,100
+Black Olives,160.0,100
+Button Mushrooms,120.0,100
+Roast Chicken,100.0,100
+Jalapenos,110.0,100
+Extra Cheese,160.0,100
