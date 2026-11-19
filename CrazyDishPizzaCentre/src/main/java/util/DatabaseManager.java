@@ -12,7 +12,7 @@ public class DatabaseManager {
     private static final String INVENTORY_DB = "inventory.txt";
     private static final String SALES_DB = "sales_report.txt";
 
-    // USER DATABASE OPERATIONS
+
     public static HashMap<String, User> loadUsers() {
         HashMap<String, User> users = new HashMap<>();
         File file = new File(USERS_DB);
