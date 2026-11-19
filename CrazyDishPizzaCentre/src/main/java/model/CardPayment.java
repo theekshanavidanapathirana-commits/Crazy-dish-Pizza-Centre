@@ -2,6 +2,7 @@ package model;
 import service.PaymentStrategy;
 
 public class CardPayment implements PaymentStrategy {
+    // stored card number used to identify the last 4 digits on receipts
     private String cardNumber;
     public CardPayment(String cardNumber) { this.cardNumber = cardNumber; }
 
